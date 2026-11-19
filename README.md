@@ -1,5 +1,5 @@
 # alpine_desk
-### A docker container with built in Xrdp, with a simple useability in docker compose.
+#### A docker container with built in Xrdp, with a simple useability in docker compose.
 **How to configure it?**
 
 *Using Docker compose:*
@@ -19,4 +19,20 @@ services:
 
         ports:
             - 8000:2000 # outside_port:2000 -> your alpine_desk is be running on :8000
+```
+---
+*Using Docker cli:*
+```
+docker run -d -p 8000:2000 --name alpine_desk \
+  -e XRDP_USER=groot \
+  -e XRDP_PASSWORD=1234 \
+  -e XRDP_SESSION="icewm-session" \
+  -e PLUS_PACKAGES="icewm" \
+  -e XRDP_USER_GROUPS="bin daemon sys adm disk wheel floppy dialout tape video" \
+  xycert:alpine_desk
+```
+
+### Building:
+```
+docker build . -t xycert:alpine_desk
 ```
