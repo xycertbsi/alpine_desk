@@ -1,5 +1,4 @@
 FROM alpine
-
 COPY import/entrypoint.sh /
 
 RUN [ "apk", "update" ]
