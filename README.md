@@ -1,6 +1,6 @@
 # alpine_desk
 
-<img src="gitrepo/remmina_connection.png" width="412" height="216">
+<img src="gitrepo/remmina_connection.png" width="800" height="720">
 
 #### A docker container with built in Xrdp, with a simple useability in docker compose.
 ### **How to configure it?**
