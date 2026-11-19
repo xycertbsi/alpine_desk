@@ -1,6 +1,6 @@
 # alpine_desk
 #### A docker container with built in Xrdp, with a simple useability in docker compose.
-**How to configure it?**
+### **How to configure it?**
 
 *Using Docker compose:*
 ```
@@ -36,3 +36,15 @@ docker run -d -p 8000:2000 --name alpine_desk \
 ```
 docker build . -t xycert:alpine_desk
 ```
+
+#### Structure:
+- 'import' folder: The files are used by Dockerfile.
+  - 'import/xrdp.ini': This gets automaticly copied to the /etc/xrdp inside the container at building
+  - 'import/entrypoint.sh': Entrypoint: Handles User setup, 
+    sets sudoers, starts xrdp(-sesman), 
+    fixes executable errors and sets .xinitrc.
+  
+- 'docker-compose.example.yml': Docker compose example.
+- 'Dockerfile': Dockerfile.
+
+**This repo its not contain any AI generated code.**
