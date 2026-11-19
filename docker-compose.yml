@@ -1,0 +1,21 @@
+services:
+    desk:
+        image: xycert:alpine_desk
+        container_name: alpine_desk
+
+        cpuset: "0,1"
+        mem_limit: 1g
+        memswap_limit: 1g
+        storage_opt:
+            size: '1G'
+
+        environment:
+            - XRDP_USER=szabe
+            - XRDP_PASSWORD=2011
+            - XRDP_SESSION=openbox
+
+            - PLUS_PACKAGES=openbox obconf-qt numix-themes-openbox xterm
+            - XRDP_USER_GROUPS=bin daemon sys adm disk wheel floppy dialout tape video
+
+        ports:
+            - 8000:2000
