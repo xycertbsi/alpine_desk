@@ -1,4 +1,7 @@
 # alpine_desk
+
+<img src="gitrepo/remmina_connection.png" width="412" height="216">
+
 #### A docker container with built in Xrdp, with a simple useability in docker compose.
 ### **How to configure it?**
 
@@ -32,16 +35,11 @@ docker run -d -p 8000:2000 --name alpine_desk \
   xycert:alpine_desk
 ```
 
-### Building:
-```
-docker build . -t xycert:alpine_desk
-```
-
-#### Structure:
+### Structure:
 ```
 - 'import' folder: The files are used by Dockerfile.
-  - 'xrdp.ini': This gets automaticly copied 
-    to the /etc/xrdp inside the container at building
+  - 'xrdp.ini': This gets automatically copied 
+    to the /etc/xrdp inside the container at building.
     
   - 'entrypoint.sh': Entrypoint: Handles User setup, 
     sets sudoers, starts xrdp(-sesman), 
@@ -50,5 +48,27 @@ docker build . -t xycert:alpine_desk
 - 'docker-compose.example.yml': Docker compose example.
 - 'Dockerfile': Dockerfile.
 ```
+
+### Building:
+```
+docker build . -t xycert:alpine_desk
+```
+
+**You can just open a bash shell of course for configureing/installing.**
+```
+host@hostuser $ docker exec -it alpine_desk /bin/bash
+6f66552ca3ae:/# apk update
+v3.24.4-127-gced0c71f993 [https://dl-cdn.alpinelinux.org/alpine/v3.24/main]
+v3.24.4-130-gb1b3bfe3756 [https://dl-cdn.alpinelinux.org/alpine/v3.24/community]
+OK: 28673 distinct packages available
+6f66552ca3ae:/# exit
+host@hostuser $
+```
+
+#### Contribute
+- You find any sort of **bugs**, **errors** please open a **issue**!
+- You have a **idea**, **better modes** to do something open issue with **idea label**!
+
+- I very honor the **ideas** and **bug fix reports**! ❤️ @xycertbsi
 
 **This repo its not contain any AI generated code.**
