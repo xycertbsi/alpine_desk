@@ -40,8 +40,10 @@ docker build . -t xycert:alpine_desk
 #### Structure:
 ```
 - 'import' folder: The files are used by Dockerfile.
-  - 'import/xrdp.ini': This gets automaticly copied to the /etc/xrdp inside the container at building
-  - 'import/entrypoint.sh': Entrypoint: Handles User setup, 
+  - 'xrdp.ini': This gets automaticly copied 
+    to the /etc/xrdp inside the container at building
+    
+  - 'entrypoint.sh': Entrypoint: Handles User setup, 
     sets sudoers, starts xrdp(-sesman), 
     fixes executable errors and sets .xinitrc.
   
