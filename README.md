@@ -65,7 +65,7 @@ OK: 28673 distinct packages available
 host@hostuser $
 ```
 
-#### Contribute
+#### Contribute:
 - You find any sort of **bugs**, **errors** please open a **issue**!
 - You have a **idea**, **better modes** to do something open issue with **idea label**!
 
