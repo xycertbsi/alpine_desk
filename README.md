@@ -23,6 +23,12 @@ services:
         ports:
             - 8000:2000 # outside_port:2000 -> your alpine_desk is be running on :8000
 ```
+Dont forget to rename the example!
+```
+mv docker-compose.example.yml docker-compose.yml
+docker compose up -d
+```
+
 ---
 *Using Docker cli:*
 ```
