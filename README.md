@@ -9,7 +9,7 @@
 ```
 services:
     desk:
-        image: xycert:alpine_desk   # the image you can build from Dockerfile
+        image: ghcr.io/xycertbsi/alpine_desk:main   # the image you can build from Dockerfile
         container_name: alpine_desk # the name of it 
         
         environment:
