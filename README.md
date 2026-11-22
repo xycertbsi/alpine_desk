@@ -32,7 +32,7 @@ docker run -d -p 8000:2000 --name alpine_desk \
   -e XRDP_SESSION="icewm-session" \
   -e PLUS_PACKAGES="icewm" \
   -e XRDP_USER_GROUPS="bin daemon sys adm disk wheel floppy dialout tape video" \
-  xycert:alpine_desk
+  ghcr.io/xycertbsi/alpine_desk:main
 ```
 
 ### Structure:
@@ -51,10 +51,10 @@ docker run -d -p 8000:2000 --name alpine_desk \
 
 ### Building:
 ```
-docker build . -t xycert:alpine_desk
+docker build . -t your_name:alpine_desk
 ```
 
-**You can just open a bash shell of course for configureing/installing.**
+**Going to the bash: **
 ```
 host@hostuser $ docker exec -it alpine_desk /bin/bash
 6f66552ca3ae:/# apk update
