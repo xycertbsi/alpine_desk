@@ -17,7 +17,7 @@ services:
             - XRDP_PASSWORD=1234 # the xrdp user password
             - XRDP_SESSION=icewm-session # the session that be executed
 
-            - PLUS_PACKAGES=icewm  # what you type here gets installed
+            - PLUS_PACKAGES=xterm icewm  # what you type here gets installed
             - XRDP_USER_GROUPS=bin daemon sys adm disk wheel floppy dialout tape video # the groups that be added to your XRDP user
 
         ports:
@@ -30,7 +30,7 @@ docker run -d -p 8000:2000 --name alpine_desk \
   -e XRDP_USER=groot \
   -e XRDP_PASSWORD=1234 \
   -e XRDP_SESSION="icewm-session" \
-  -e PLUS_PACKAGES="icewm" \
+  -e PLUS_PACKAGES="xterm icewm" \
   -e XRDP_USER_GROUPS="bin daemon sys adm disk wheel floppy dialout tape video" \
   ghcr.io/xycertbsi/alpine_desk:main
 ```
