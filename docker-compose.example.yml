@@ -1,6 +1,6 @@
 services:
     desk:
-        image: xycert:alpine_desk
+        image: ghcr.io/xycertbsi/alpine_desk:main
         container_name: alpine_desk
 
         environment:
