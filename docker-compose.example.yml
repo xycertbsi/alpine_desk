@@ -8,7 +8,7 @@ services:
             - XRDP_PASSWORD=1234
             - XRDP_SESSION=icewm-session
 
-            - PLUS_PACKAGES=icewm
+            - PLUS_PACKAGES=xterm icewm
             - XRDP_USER_GROUPS=bin daemon sys adm disk wheel floppy dialout tape video
 
         ports:
